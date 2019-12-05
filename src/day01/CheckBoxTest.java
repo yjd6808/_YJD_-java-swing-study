@@ -1,5 +1,6 @@
 package day01;
 
+import java.awt.BorderLayout;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
@@ -21,7 +22,7 @@ public class CheckBoxTest extends JFrame{
 		 checkBoxPanel.add(checkBoxApple);
 		 checkBoxPanel.add(checkBoxBanana);
 		 
-		 this.add(checkBoxPanel);
+		 this.add(BorderLayout.NORTH, checkBoxPanel);
 		 this.add(textArea);
 		 
 		 checkBoxApple.addItemListener(new ItemListener() {
@@ -41,7 +42,7 @@ public class CheckBoxTest extends JFrame{
 				public void itemStateChanged(ItemEvent e) {
 					JCheckBox box =  (JCheckBox)e.getSource();
 					if (box.isSelected()) {
-						((JTextArea)textArea.getViewport().getView()).append("바나나");
+						((JTextArea)textArea.getViewport().getView()).append("바나나\n");
 					}
 				}
 			});
