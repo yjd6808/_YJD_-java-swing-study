@@ -6,6 +6,8 @@ import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import book_manager_program.ProgramMain;
+
 public class PannelTest extends Frame implements ActionListener
 {
 	//1. 컴포넌트 생성  / Button b1 = new Button("버튼1"); 
